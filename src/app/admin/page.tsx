@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '../../lib/supabase/client'
 import type { Lead, Trip } from '../../lib/types'
 
-const STAGES = ['NEW', 'CONTACTED', 'QUALIFIED', 'VIBE_CHECK_SENT', 'CONFIRMED', 'NOT_A_FIT']
+const STAGES = ['NEW', 'CONTACTED', 'QUALIFIED', 'VIBE_CHECK_SENT', 'CONFIRMED', 'NOT_A_FIT'] 
 const STAGE_LABELS: Record<string, string> = {
   NEW: 'New', CONTACTED: 'Contacted', QUALIFIED: 'Qualified',
   VIBE_CHECK_SENT: 'Vibe Check Sent', CONFIRMED: 'Confirmed', NOT_A_FIT: 'Not a Fit'

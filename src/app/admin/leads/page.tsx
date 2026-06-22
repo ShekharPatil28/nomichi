@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '../../../lib/supabase/client'
-import type { Lead, Trip, Note } from '../../../lib/types'
+import type { Lead, Trip, Note, LeadStatus } from '../../../lib/types'
 
-const STAGES = ['NEW', 'CONTACTED', 'QUALIFIED', 'VIBE_CHECK_SENT', 'CONFIRMED', 'NOT_A_FIT']
+const STAGES = ['NEW', 'CONTACTED', 'QUALIFIED', 'VIBE_CHECK_SENT', 'CONFIRMED', 'NOT_A_FIT'] as const
 const STAGE_LABELS: Record<string, string> = {
   NEW: 'New', CONTACTED: 'Contacted', QUALIFIED: 'Qualified',
   VIBE_CHECK_SENT: 'Vibe Check Sent', CONFIRMED: 'Confirmed', NOT_A_FIT: 'Not a Fit'
@@ -190,7 +190,7 @@ function LeadDetail({ lead, trips, onUpdate, onClose }: {
   const [aiSum, setAiSum] = useState('')
   const [aiLoading, setAiLoading] = useState({ wa: false, sum: false })
   const trip = trips.find(t => t.id === lead.trip_id)
-  const [pendingStatus, setPendingStatus] = useState(lead.status)
+  const [pendingStatus, setPendingStatus] = useState<LeadStatus>(lead.status)
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
 
