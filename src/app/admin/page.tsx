@@ -69,7 +69,7 @@ export default function DashboardPage() {
   )
 
   return (
-    <div style={{ padding: '2rem', maxWidth: 900 }}>
+      <div style={{ padding: '2rem', maxWidth: 900 }}>
       <p style={{ fontWeight: 700, fontSize: 22, color: 'var(--c-earth)', marginBottom: 2 }}>
        Hey Admin ! 👋
       </p>

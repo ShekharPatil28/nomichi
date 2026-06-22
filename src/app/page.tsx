@@ -373,6 +373,22 @@ export default function PublicPage() {
           </div>
         )}
       </div>
+       {/* Admin link */}
+      <div style={{ textAlign: 'center', paddingBottom: '20px' }}>
+        <a
+          href="/admin"
+          style={{
+            display: 'inline-block',
+            marginTop: 20,
+            fontSize: 11,
+            color: 'rgba(0,0,0,.3)',
+            textDecoration: 'none',
+            letterSpacing: '.06em'
+          }}
+        >
+          Team login →
+        </a>
+      </div>
     </div>
   )
 }
@@ -382,7 +398,7 @@ function Field({ label, error, children }: {
   error?: string
   children: React.ReactNode
 }) {
-  return (
+  return (  
     <div style={{ marginBottom: 14 }}>
       <label style={{
         fontSize: 12, fontWeight: 500, color: 'var(--c-sub)',
