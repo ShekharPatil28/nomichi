@@ -20,13 +20,13 @@ Nomichi is a travel community and trip management platform built with Next.js, T
 
 ## Deployment
 
-Vercel URL: 
+Vercel URL: https://nomichi-47wq.vercel.app/
 
 ## Admin Access
 
-Email: 
+Email: team@nomichi.com
 
-Password: 
+Password: nomichi2026
 
 ## Note
 
