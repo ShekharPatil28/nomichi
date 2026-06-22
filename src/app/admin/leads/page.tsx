@@ -126,7 +126,7 @@ export default function LeadsPage() {
               key={l.id}
               onClick={() => setSelLead(l)}
               style={{
-                background: '#fff',
+                // background: '#fff',
                 border: selLead?.id === l.id ? '1.5px solid var(--c-accent)' : '1px solid var(--c-border)',
                 borderRadius: 12, padding: '0.9rem 1rem', marginBottom: 8,
                 cursor: 'pointer',
