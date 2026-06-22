@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '../../../lib/supabase/client'
-import type { Trip } from '../../../lib/types'
+import type { Trip,TripStatus } from '../../../lib/types'
 
 type TripForm = {
   name: string
@@ -11,7 +11,7 @@ type TripForm = {
   end_date: string
   price_gst: string | number
   total_seats: string | number
-  status: string
+  status: TripStatus
   description: string
 }
 
@@ -200,7 +200,10 @@ export default function TripsPage() {
                 <input value={form.destination} onChange={e => setForm(f => ({ ...f, destination: e.target.value }))} placeholder="Himachal Pradesh" />
               </Field>
               <Field label="Status">
-                <select value={form.status} onChange={e => setForm(f => ({ ...f, status: e.target.value }))}>
+                <select value={form.status} onChange={e =>  setForm(f => ({
+      ...f,
+      status: e.target.value as TripStatus
+    }))}>
                   <option value="open">Open</option>
                   <option value="closed">Closed</option>
                 </select>
